@@ -1,0 +1,13 @@
+# Learning Complementary Descriptors for Image Matching
+Sparse local feature matching has served as the cornerstone of numerous visual geometry tasks and attracted extensive attention.
+Although significant progress has been made in this area, improving the discriminative power of descriptors remains a key challenge.
+As far as we know, existing sparse feature matching methods only predict a single descriptor map for keypoints, which might
+restrict their potential in solving complex scenarios. The problem is more severe in real-time applications where most methods
+only learn descriptor maps at a reduced spatial resolution compared to the input image. Consequently, they require interpolating
+from the low resolution map for obtaining per-keypoint descriptors, which will introduce background contamination and reduce the
+discriminability of final descriptors. To address these issues, ***we propose an efficient novel complementary local feature description
+model. Specifically, we simultaneously learn two descriptor maps using different loss functions within a single Convolutional
+Neural Network (CNN). An orthogonal loss is introduced to effectively coordinate the learning of the two branches, aiming to
+obtain decoupled and complementary descriptors.*** Extensive experiments across various visual geometry tasks, such as homography
+estimation, indoor and outdoor pose estimation, as well as visual localization, have demonstrated the improved discrimination power
+of the proposed descriptors over existing methods.
